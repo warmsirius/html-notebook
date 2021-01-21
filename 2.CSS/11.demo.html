@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器权重</title>
+    <style>
+        #box1{
+            color: orange;
+        }
+
+        div{
+            color: yellow;
+        }
+
+        div#box1{
+            color: rebeccapurple;
+        }
+
+        .red{
+            color: red !important;
+        }
+
+        /*分组选择器，单独计算*/
+        div, span, p{
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="box1" class="red">我是1个div</div>
+    <div>
+        哈哈哈
+        <span>阿啦啦啦</span>
+        <p>啦啦啦啊</p>
+    </div>
+</body>
+</html>
