@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直外边距折叠</title>
+    <style>
+        .box1, .box2{
+            width: 200px;
+            height: 200px;
+            font-size: 100px;
+        }
+
+        .box1{
+            background-color: rebeccapurple;
+            /* 设置下外边距 */
+            margin-bottom: 100px;
+        }
+
+        .box2{
+            background-color: blue;
+            /* 设置上外边距 */
+            /*margin-bottom: 100px;*/
+        }
+
+        .box3{
+            width: 200px;
+            height: 199px;
+            background-color: #bfa;
+            border-top: 1px #bfa solid;
+            /*padding-top: 100px;*/
+            /*overflow: hidden;*/
+        }
+
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            margin-top: 99px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+
+<div class="box3">
+    <div class="box4"></div>
+</div>
+
+
+</body>
+</html>
