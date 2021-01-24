@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平方向布局</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 200px;
+            border: 10px red solid;
+        }
+
+        .inner{
+            width: auto;
+            height: 200px;
+            background-color: #bfa;
+            /*margin-left: 100px;*/
+            /*margin-right: 200px;*/
+        }
+        /*inner:
+        0 + 0 + 0 + 200 + 0 + 0 + 0 != 800
+        */
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+
+</body>
+</html>
