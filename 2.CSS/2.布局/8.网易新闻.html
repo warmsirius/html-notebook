@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易新闻</title>
+    <link rel="stylesheet" href="../../assets/重置样式表/reset.css">
+    <style>
+        /*设置body背景颜色，以使网页方便查看*/
+        body{
+            background-color: antiquewhite;
+        }
+
+        a{
+            /*统一去除下划线*/
+            text-decoration: none;
+
+        }
+
+        /*设置容器样式*/
+        .news-wrapper{
+            /*设置宽度*/
+            width: 300px;
+            /*设置高度*/
+            height: 357px;
+            /*设置居中*/
+            margin: 50px auto;
+            /*设置上边框，设置边框后，高度会+1，要保持不变，需要高度-1*/
+            border-top: 1px #DDDDDD solid;
+        }
+
+        .news-title{
+            /*为了边框和文字宽度一致，需要将h2转换为行内块元素*/
+            display: inline-block;
+            height: 40px;
+            /*设置上边框*/
+            border-top: 1px red solid;
+            /*通过margin-top将h2上移1px，盖住上边框*/
+            margin-top: -1px;
+            padding-top: 10px;
+        }
+
+        .news-title a{
+            /*设置文字颜色*/
+            color: #333333;
+            /*设置文字加粗*/
+            font-weight: bold;
+        }
+
+        .news-title a:hover{
+            color: darkred;
+        }
+
+        /*设置news-img高度*/
+        .news-img{
+            height: 150px;
+        }
+
+        /*调整图片的大小: 和容器宽度一致*/
+        .news-img img{
+            width: 100%;
+        }
+
+        /*设置图片的文字效果*/
+        .news-img .img-title{
+            /*设置字体颜色*/
+            color: white;
+            /*向上移动文字*/
+            margin-top: -30px;
+            font-weight: bold;
+            /*设置padding*/
+            padding-left: 20px;
+        }
+
+        /*设置新闻列表*/
+        .news-list{
+            /*设置上边距*/
+            margin-top: 20px;
+
+        }
+
+        /*通过before伪元素来为每1个li添加项目符号*/
+        .news-list li::before{
+            content: "■";
+            color: rgb(218, 218, 218);
+            font-size: 10px;
+        }
+
+        /*设置li*/
+        .news-list li{
+            margin-bottom: 17px;
+        }
+
+        /*设置li中文字*/
+        .news-list li a{
+            font-size: 14px;
+            color: #666666;
+            margin-right: 4px;
+        }
+
+        .news-list li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!--创建外层容器-->
+<div class="news-wrapper">
+    <!--创建标题标签-->
+    <h2 class="news-title"><a href="#">体育</a></h2>
+    <!--创建1个图片容器-->
+    <div class="news-img">
+        <a href="#">
+            <img src="../../assets/网易新闻图片.jpg" alt="">
+            <!--创建图片标题-->
+            <h3 class="img-title">费德勒首负迪米 扶额摇头不满发挥</h3>
+        </a>
+
+    </div>
+
+
+    <ul class="news-list">
+        <li>
+            <a href="#">足坛第1硬汉!场边刮骨疗法，眼都不眨</a>
+        </li>
+        <li>
+            <a href="#">当年的香港飞龙队，CBA史上的第一奇葩</a>
+        </li>
+        <li>
+            <a href="#">406天没扣篮！格里芬成3分工具人</a>
+        </li>
+
+        <li>
+            <a href="#">406天没扣篮！格里芬成3分工具人</a>
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html>
