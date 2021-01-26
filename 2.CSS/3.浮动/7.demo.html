@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高度塌陷最终方案</title>
+    <style>
+        .box1{
+            border: 10px red solid;
+        }
+
+        .box2{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            float: left;
+        }
+
+        /*完美解决*/
+        .box1:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        /*.box3{*/
+        /*    clear: both;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+    <!--虽然这样可以完美解决高度坍塌问题，但是由于多引入了div标签，实际上是引入了html结构，但是解决的又是表现问题，应该由CSS去解决-->
+<!--    <div class="box3"></div>-->
+</div>
+
+</body>
+</html>
