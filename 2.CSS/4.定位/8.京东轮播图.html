@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东轮播图</title>
+    <link rel="stylesheet" href="../../assets/重置样式表/reset.css">
+    <style>
+        /*设置图片的容器*/
+        .img-list{
+            width: 590px;
+            height: 470px;
+            margin: 0 auto;
+            /*为ul开启相对定位，目的是使ul中的pointer可以相对于ul进行定位，而不是相对于初始包含块html定位*/
+            position: relative;
+        }
+
+        .img-list img{
+            height: 470px;
+        }
+
+        /*设置li*/
+        .img-list li{
+            position: absolute;
+        }
+
+        /*通过修改元素层级来显示图片*/
+        .img-list li:nth-child(2){
+            z-index: 2;
+        }
+
+        /*设置导航点的样式*/
+        .pointer a{
+            /*设置元素向左浮动*/
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            margin: 0 4px;
+            /*背景颜色设置为透明，但是又会带来新问题: 导航点变大了，因为背景颜色被透出来了*/
+            border: 2px solid transparent;
+            /*将背景颜色设置到内容区，边框和内边距不再有背景颜色*/
+            background-clip: content-box;
+        }
+
+        /*设置导航点的容器*/
+        .pointer{
+            position: absolute;
+            z-index: 9999;
+            bottom: 20px;
+            left: 40px;
+        }
+
+        /*选中的导航点的样式*/
+        .pointer a.active{
+            background-color: rgb(255, 255, 255);
+            /*但是这个会使得active的a大了，往下移动, 解决办法，给所有a都加个边框，但是其他的边框应该隐藏*/
+            border: 2px solid rgba(255, 255, 255, .3);
+        }
+
+        .pointer a:hover{
+            background-color: rgb(255, 255, 255);
+            /*但是这个会使得active的a大了，往下移动, 解决办法，给所有a都加个边框，但是其他的边框应该隐藏*/
+            border: 2px solid rgba(255, 255, 255, .3);
+        }
+    </style>
+</head>
+<body>
+    <ul class="img-list">
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/1.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/2.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/3.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/4.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/5.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/6.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/7.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../../assets/京东轮播图/8.png" alt=""></a></li>
+
+        <div class="pointer">
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </ul>
+
+</body>
+</html>
