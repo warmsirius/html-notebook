@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位元素布局</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            position: relative;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: rebeccapurple;
+            /*实现元素在父元素水平居中*/
+            position: absolute;
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            margin-top: auto;
+            margin-bottom: auto;
+            top: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+</div>
+
+</body>
+</html>
